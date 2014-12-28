@@ -7,7 +7,6 @@ import (
 
 func isPerfectSquare(nr uint64) bool {
 	s := math.Sqrt(float64(nr))
-	fmt.Println("s: ", s, uint64(s), nr)
 	return  uint64(s) * uint64(s) == nr
 }
 

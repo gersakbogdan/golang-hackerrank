@@ -1,22 +1,34 @@
 package main
 
-import "fmt"
+import (
+    "fmt"
+    "math/big"
+)
 
-func fibModified(a, b, nth uint64) uint64 {
+func fiboModified(a, b, nth int64) *big.Int {
+    var i int64
 
-    for nth > 0 {
-        a = b*b + a
-        b = a*a + b
-        nth--
-        nth--
+    tn  := big.NewInt(a)
+    tn1 := big.NewInt(b)
+
+    for i = 2; i < nth; i = i + 2 {
+        temp := new(big.Int)
+
+        temp.Mul(tn1, tn1)
+        tn.Add(temp, tn)
+
+        temp.Mul(tn, tn)
+        tn1.Add(temp, tn1)
     }
 
-    return b
+    if nth % 2 == 1 {
+        return tn
+    }
+    return tn1
 }
 
 func main() {
-    var a, b, nth uint64
+    var a, b, nth int64
     fmt.Scan(&a, &b, &nth)
-
-    fmt.Println(fibModified(a, b, nth))
+    fmt.Println(fiboModified(a, b, nth))
 }

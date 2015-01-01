@@ -21,9 +21,11 @@ func insertionSort(arr []uint64) {
 
 func print(arr []uint64) {
     l := len(arr)
+    
     for i := 0; i < l; i++ {
         fmt.Printf("%v ", arr[i])
     }
+
     fmt.Println()
 }
 

@@ -8,10 +8,8 @@ import (
 
 func print(arr [100]int) {
 	for i := 0; i < 100; i++ {
-		if (arr[i] > 0) {
-			for j := 0; j < arr[i]; j++ {
-				fmt.Print(i, " ")
-			}
+		for j := 0; j < arr[i]; j++ {
+			fmt.Print(i, " ")
 		}
 	}
 

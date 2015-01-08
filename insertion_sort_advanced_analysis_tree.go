@@ -1,3 +1,7 @@
+/*
+    Binary tree solution submited by (https://www.hackerrank.com/kristi_dev) on hackerrank
+*/
+
 package main
 
 import (

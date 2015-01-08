@@ -1,3 +1,8 @@
+/*
+    Mergesort
+
+    http://en.wikipedia.org/wiki/Merge_sort
+ */
 package main
 
 import (
